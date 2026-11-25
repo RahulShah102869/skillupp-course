@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillUp — Course Store</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">SkillUp <span>COURSES</span></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <button class="cart-icon-btn" id="openCartBtn">
+            🛒 Cart
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+    </header>
+
+    <div class="hero">
+        <h1>Upgrade Your Skills Today</h1>
+        <p>
+            Learn from industry experts. 12+ premium courses in programming,
+            development, and communication.
+        </p>
+    </div>
+
+    <main>
+        <div class="section-title">All Courses <span>12 courses</span></div>
+        <div class="section-sub">
+            Choose your path — click "Add to Cart" to start learning.
+        </div>
+
+        <div class="courses-grid" id="coursesGrid"></div>
+    </main>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>🛒 Your Cart <span id="cartHeaderCount">0</span></h2>
+            <button class="close-cart" id="closeCartBtn">✕</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Subtotal</span>
+                <span id="subtotal">₹0</span>
+            </div>
+            <div class="cart-total-row">
+                <span>Discount (10%)</span>
+                <span id="discount" style="color: #0f8b4b">₹0</span>
+            </div>
+            <div class="cart-total-row grand">
+                <span>Total</span>
+                <span id="grandTotal">₹0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" disabled>
+                Proceed to Checkout →
+            </button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Added to cart!</div>
+
+    <div class="success-modal" id="successModal">
+        <div class="success-box">
+            <div class="success-icon">!!!</div>
+            <h2>Order Placed!</h2>
+            <p>
+                Thank you for your purchase. Your courses are ready to start. Check
+                your email for access details.
+            </p>
+            <button id="successCloseBtn">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
